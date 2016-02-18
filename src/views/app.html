@@ -1,0 +1,44 @@
+<div ng-controller="appController" ng-init="init()">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+           <div class="col-md-6">
+               <input type="text" placeholder="Starting point" ng-model="startlocation" id="startlocation" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Destination point" ng-model="endlocation" id="endlocation" class="form-control">
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <button class="btn btn-primary" ng-click="processRequest()">Get Weather & Directions</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3><i class="glyphicon glyphicon-cloud" style="color:blue"></i> Weather Details</h3>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{startlocation | uppercase}}</h3>
+                    </div>
+                    <div class="panel-body" id="starting-point-weather"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{endlocation | uppercase}}</h3>
+                    </div>
+                    <div class="panel-body" id="destination-point-weather"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3><i class="glyphicon glyphicon-map-marker" style="color:Red"></i> Map</h3>
+            <div id="map-canvas" style="height: 400px;"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WeatherApp">
+<head>
+<title>Check Weather and Head</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="app.js"></script>
+</head>
+<body>
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html#/">Weather and Directions</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html#/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li><a href="index.html#/app"><i class="glyphicon glyphicon-globe"></i> Login</a></li>
+                    <li><a href="index.html#/register"><i class="glyphicon glyphicon-list-alt"></i> Register</a></li>
+                    <li><a href="index.html#/user"><i class="glyphicon glyphicon-hdd"></i> View Local Storage</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+		<div ng-view></div>
+</body>
+</html>
